@@ -34,31 +34,28 @@ public class ConverterTest {
 	
 	/**
 	 * test whether for non a number value the getRomanNumber throws NumberFormatException
-	 * @throws NumberFormatException
 	 * @throws NumberOutOfRangeException
 	 */
 	@Test(expected=NumberFormatException.class)
-	public void testNonNumberFormat() throws NumberFormatException, NumberOutOfRangeException {
+	public void testNonNumberFormat() throws  NumberOutOfRangeException {
 		RomanConverterUtil.getRomanNumber("3875v");
 	}
 	
 	/**
 	 * check if for an empty value the getRomanNumber throws NumberFormatException
-	 * @throws NumberFormatException
 	 * @throws NumberOutOfRangeException
 	 */
 	@Test(expected=NumberFormatException.class)
-	public void testEmpty() throws NumberFormatException, NumberOutOfRangeException {
+	public void testEmpty() throws NumberOutOfRangeException {
 		RomanConverterUtil.getRomanNumber("");
 	}
 	
 	/**
 	 * check if for a real value the getRomanNumber throws NumberFormatException
-	 * @throws NumberFormatException
 	 * @throws NumberOutOfRangeException
 	 */
 	@Test(expected=NumberFormatException.class)
-	public void testRealNumber() throws NumberFormatException, NumberOutOfRangeException {
+	public void testRealNumber() throws NumberOutOfRangeException {
 		RomanConverterUtil.getRomanNumber("4.2");
 	}
 	

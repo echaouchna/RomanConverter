@@ -37,7 +37,7 @@ public final class RomanConverterUtil {
 	 * @return Roman number
 	 * @throws NumberOutOfRangeException
 	 */
-	public static String getRomanNumber(String stringIntEntry) throws NumberFormatException, NumberOutOfRangeException {
+	public static String getRomanNumber(String stringIntEntry) throws NumberOutOfRangeException {
 		return getRomanNumber(Integer.parseInt(stringIntEntry));
 	}
 

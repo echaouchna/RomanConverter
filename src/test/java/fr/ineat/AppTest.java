@@ -8,10 +8,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class AppTest {
+	
+	private static Logger logger = LogManager.getLogger(AppTest.class);
 	/**
 	 * compare the list given in the exercise with the results from the conversion method
 	 */
@@ -25,7 +29,7 @@ public class AppTest {
 		try {
 			actualList = App.readAndConvertFile(file);
 		} catch (IOException e) {
-			System.out.println("Unable to open input file");
+			logger.error("Unable to open input file");
 		}
 		
 		Assert.assertEquals(expectedList, actualList);

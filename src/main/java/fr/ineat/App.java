@@ -28,7 +28,7 @@ public class App {
 		List<String> romanValues = new ArrayList<String>();
 		BufferedReader br = new BufferedReader(new FileReader(fin));
 	 
-		String line = null;
+		String line;
 		int lineNumber = 1;
 		while ((line = br.readLine()) != null) {
 			logger.debug("line value = " + line);
@@ -39,7 +39,7 @@ public class App {
 			} catch (NumberFormatException nfe) {
 				logger.warn("The entry <" + line + "> in line " + lineNumber + " is not a number !!!");
 			} catch (NumberOutOfRangeException noore) {
-				logger.warn(noore.getMessage());
+				logger.warn("The number " + line + " is out of range");
 			}
 			lineNumber++;
 		}

@@ -13,7 +13,7 @@ Le projet est développé sous un environnement windows avec l’IDE eclipse
 2. Création d’un repo local git
 3. Recherche sur les nombres romains (10 minutes)
 4. Voir l’existant sur internet concernant l’énoncé (10 minutes)
-5. Identification des tests possible (20 minutes)
+5. Identification des tests possibles (20 minutes)
 6. Création des tests unitaires (20 minutes)
 7. Développement de l’algorithme de conversion (40 minutes)
 8. Validation de l’algorithme par les tests unitaires

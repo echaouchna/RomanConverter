@@ -5,11 +5,18 @@ import java.util.Map;
 
 public final class RomanConverterUtil {
 	
+	// romanNumerals contains Roman numerals and the equivalent integer
 	private static final Map<String, Integer> romanNumerals;
 	
 	private RomanConverterUtil() {
 	}
 
+	/**
+	 * converts integers to Roman values
+	 * @param intEntry
+	 * @return Roman number
+	 * @throws NumberOutOfRangeException
+	 */
 	public static String getRomanNumber(int intEntry) throws NumberOutOfRangeException {
 		if (intEntry < 1 || intEntry >= 4000) {
 			throw new NumberOutOfRangeException("Number " + intEntry + " is out of range (1, 3999)");
@@ -24,10 +31,23 @@ public final class RomanConverterUtil {
 		return result;
 	}
 	
+	/**
+	 * converts strings to integers, then to Roman values
+	 * @param stringIntEntry
+	 * @return Roman number
+	 * @throws NumberOutOfRangeException
+	 */
 	public static String getRomanNumber(String stringIntEntry) throws NumberFormatException, NumberOutOfRangeException {
 		return getRomanNumber(Integer.parseInt(stringIntEntry));
 	}
 
+	/**
+	 * repeat the Roman literal as much as it exists in the integer
+	 * for example in 2016 there is 2 M, the result of this function will be the string "MM"
+	 * @param str
+	 * @param times
+	 * @return string containing as much literals as it exists in the integer
+	 */
 	private static String generateNumerals(String str, int times) {
 		if (str == null) {
 			return "";
@@ -39,6 +59,7 @@ public final class RomanConverterUtil {
 		return sb.toString();
 	}
 	
+	// statically initialize romanNumerals
 	static {
 		romanNumerals = new LinkedHashMap<String, Integer>();
 		

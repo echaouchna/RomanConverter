@@ -18,6 +18,12 @@ public class App {
 	
 	private static Logger logger = LogManager.getLogger(App.class);
 	
+	/**
+	 * reads a file and convert it to a list of Roman numbers
+	 * @param fin
+	 * @return list of Roman numbers
+	 * @throws IOException
+	 */
 	public static List<String> readAndConvertFile(File fin) throws IOException {
 		List<String> romanValues = new ArrayList<String>();
 		BufferedReader br = new BufferedReader(new FileReader(fin));

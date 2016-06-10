@@ -8,11 +8,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import org.hamcrest.core.Is;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class AppTest {
+	/**
+	 * compare the list given in the exercise with the results from the conversion method
+	 */
 	@Test
 	public void testApp() {
 		List<String> expectedList = Arrays.asList("CLIII", "CCXLIX", "DLXXXIII", "MCMLXIII", "MMMDCCCLXXV");
@@ -29,6 +31,11 @@ public class AppTest {
 		Assert.assertEquals(expectedList, actualList);
 	}
 	
+	/**
+	 * compare the first 1000 Roman numbers with the conversion of the first 1000 integers
+	 * @throws NumberOutOfRangeException
+	 * @throws FileNotFoundException
+	 */
 	@Test
 	public void test1To1000() throws NumberOutOfRangeException, FileNotFoundException {
 		List<String> expectedList = new ArrayList<String>();
